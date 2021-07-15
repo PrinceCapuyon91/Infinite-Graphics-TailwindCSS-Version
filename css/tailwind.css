@@ -1,0 +1,25 @@
+.hello {
+  color: red;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-hover {
+    @apply hover:text-gray-500 transition ease-in-out duration-150;
+  }
+  .btn-primary {
+    @apply  bg-navyBlue text-white px-10 py-3 text-lg tracking-normal rounded-md shadow-md hover:bg-navyBlueHover transition ease-in-out duration-150;
+  }
+  .about-text {
+    @apply text-sm text-gray-800 leading-snug mb-8 lg:col-span-3 lg:leading-normal lg:text-base lg:mb-0 lg:text-justify xl:text-2xl 2xl:leading-relaxed;
+  }
+  .productCards {
+    @apply flex flex-col bg-white mt-6 mb-6 rounded-md shadow-md w-full overflow-hidden hover:shadow-lg sm:w-96 sm:m-6 lg:mb-10 lg:w-80 xl:m-0 xl:w-60 2xl:w-80;
+  }
+  .serviceCards {
+    @apply flex flex-col items-center text-gray-100 border-2 rounded-lg mb-12 sm:w-96 lg:w-60 xl:w-80 2xl:w-96;
+  }
+}
